@@ -145,6 +145,15 @@ a:not([href]):not([tabindex]) {
     color: #FFF;
     cursor: pointer;
 }
+.logo  {
+
+    
+    width: 200px; /* Ajustar el tamaño del logo según tus necesidades */
+    margin-left: 80px;/*ayuda a centrar*/
+   
+   
+
+}
 
 .btn {
     border: 2px solid transparent;
@@ -1003,8 +1012,9 @@ h2.menu-item:after {
 
 .social li {
     display: inline-block;
-    margin-right: 2px;
+    margin-right: 80px;
     text-align: center;
+    
 }
 
 .social a {
@@ -1013,11 +1023,14 @@ h2.menu-item:after {
     height: 35px;
     width: 35px;
     transition: all 0.5s;
+   
+    
 }
 
 .social li i {
     line-height: 32px;
-    font-size: 16px;
+    font-size: 35px;
+    
 }
 
 .social a:hover {
