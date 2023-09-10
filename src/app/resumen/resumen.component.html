@@ -1,18 +1,20 @@
 <section class="content" id="about">
     <div class="block-content">
-        <h3 class="block-title">Perfil</h3>
-        <h3 class="subheading">¡Hola! soy Anderson Bastidas <strong>Analista De Software & Programador BackEnd/FrontEnd</strong></h3>
-        <p>Web Senior con más de 8 años de experiencia. especializada en desarrollo front end y back end. Experimentado con todas las etapas de la ciclo de desarrollo para proyectos web dinámicos. Tener un conocimiento profundo incluyendo HTML5 avanzado, CSS, CSS3, SASS, LESS, JSON, XML, Java, JavaScript, JQuery, Angular JS. Fuertes antecedentes en gestión y liderazgo.</p>
+        <h3 class="block-title">Profile</h3>
+        <h3 class="subheading">¡Welcome! Saso-Organizer´s <strong>Professional Home Organizer’s and Cleaning Services
+            ✨ Harmony • Peace and Free Spaces</strong></h3>
+        <p>At SasoOrganizer´s, we are passionate about transforming every corner into a functional, harmonious and efficient place. We are a leading space organization company dedicated to creating environments that reflect the personality and unique needs of our clients. Whether at home or in the workplace, we believe that a well-organized space can significantly improve 
+        quality of life and increase productivity.</p>
         <div class="info-list row">
-            <div class="col-sm-6"><span>Nombre : </span> Anderson Bastidas</div>
-            <div class="col-sm-6"><span>Fecha de Nacimiento : </span> Junio 10, 1987 </div>
-            <div class="col-sm-6"><span>Dirección : </span> Perú, Lima, Carabayllo.</div>
-            <div class="col-sm-6"><span>Email : </span> davisanderson87@gmail.com</div>
-            <div class="col-sm-6"><span>Telefono : </span> + 51 959 747 175</div>
-            <div class="col-sm-6"><span>Interes : </span> Frelance, Full-Time</div>
+            <!-- <div class="col-sm-6"><span>Nombre : </span> Anderson Bastidas</div> -->
+            <!-- <div class="col-sm-6"><span>Fecha de Nacimiento : </span> Junio 10, 1987 </div> -->
+            <div class="col-sm-6" *ngFor="let personalx of so.dPersonales"><span>{{personalx.nombre}} : </span>{{personalx.desp}}</div>
+            <!-- <div class="col-sm-6"><span>Email : </span> @@@</div>
+            <div class="col-sm-6"><span>Telefono : </span> + 1(404) 578 5294</div> -->
+            <!-- <div class="col-sm-6"><span>Interes : </span> Frelance, Full-Time</div> -->
         </div>
     </div>
-    <div class="block-content">
+    <!-- <div class="block-content">
         <h3 class="block-title">Profesional</h3>
        
           <label class="progress-bar-label"></label>
@@ -21,9 +23,9 @@
                   <span></span>
               </div>
           </div>
-      </div>
+      </div> -->
 
-    <div class="block-content">
+    <!-- <div class="block-content">
         <h3 class="block-title">Experiencia</h3>
         <div class="timeline experience">
             <div class="row">
@@ -42,8 +44,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="block-content">
+    </div> -->
+    <!-- <div class="block-content">
         <h3 class="block-title">Educación</h3>
         <div class="timeline education">
             <div class="row">
@@ -62,52 +64,22 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="block-content">
-        <h3 class="block-title">Servicios</h3>
+    </div> -->
+    <div class="block-content" >
+        <h3 class="block-title">Services</h3>
         <div class="row">
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-icon">
-                    <i class="ion-laptop"></i>
+           <div class="col-md-4 col-sm-6 service" *ngFor="let servicesx of so.services">
+                <div class="service-icon" >
+                    <i class="{{servicesx.icon}}"></i>
                 </div>
-                <h4>Diseño Web</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+                <h4>{{servicesx.Nombre}}</h4>
+                <p>{{servicesx.Descripcion}}</p>
             </div>
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-icon">
-                    <i class="ion-pie-graph"></i>
-                </div>
-                <h4>Desarrollo de Aplicaciones</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-            </div>
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-icon">
-                    <i class="ion-paintbucket"></i>
-                </div>
-                <h4>Diseño Grafico</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-            </div>
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-icon">
-                    <i class="ion-printer"></i>
-                </div>
-                <h4>Print Design</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-            </div>
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-icon">
-                    <i class="ion-qr-scanner"></i>
-                </div>
-                <h4>Graphic Design</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-            </div>
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-icon">
-                    <i class="ion-social-buffer"></i>
-                </div>
-                <h4>Print Design</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-            </div>
+       
+          
+
+            
+          
         </div>
     </div>
    <!--  <div class="block-content">
@@ -127,7 +99,7 @@
             </div>
         </div>
     </div> -->
-    <div class="block-content">
+    <!-- <div class="block-content">
         <h3 class="block-title">Testimonios</h3>
         <div class="row">
             <div id="liontestimonial" class="owl-carousel owl-theme">
@@ -142,7 +114,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row text-center">
         <div class="col-md-12 btn-email">
             <a class="btn lowercase">davisanderson87@gmail.com</a>

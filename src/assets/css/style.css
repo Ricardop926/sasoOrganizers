@@ -2168,7 +2168,6 @@ h4.package {
                         10. RESPONSIVE
 
 -------------------------------------------------------------------*/
-
 @media (min-width:1920px) {
     .name-block {
         -ms-transform: rotate(-34deg);
