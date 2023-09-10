@@ -14,9 +14,9 @@ const envioCorreo = (req=request,resp=response)=>{
     })
     const opciones = {
         from:'programacion',
-        subject: body.asunto,
+        subject: body.subject,
         to:body.email,
-        text:body.mensaje
+        text:body.message
     };
 
     config.sendMail(opciones,function(error,result){

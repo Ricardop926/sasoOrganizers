@@ -4,20 +4,20 @@
         <p>Contact us for free estimate</p>
         <div class="row">
         <div class="col-md-6">
-            <form class="contact-form"method="post" id="contact_form"  >
+            <form class="contact-form"method="post" id="contact_form" [formGroup]="datos" >
                 <div class="form-control-wrap">
                     <div id="message" class="alert alert-danger alert-dismissible fade"></div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="fname" placeholder="Name*" name="fname">
+                        <input type="text" class="form-control" placeholder="Subject*" name="subject" formControlName="subject">
                     </div>
                     <div class="form-group mar-top-40">
-                        <input type="email" class="form-control" id="email" placeholder="Email*" name="email">
+                        <input type="email" class="form-control"  placeholder="Email*" name="email" formControlName="email">
                     </div>
                     <div class="form-group mar-top-60">
-                        <textarea class="form-control" rows="10" name="comment" id="comment" placeholder="message"></textarea>
+                        <textarea class="form-control" rows="10" name="message"  placeholder="message" formControlName="message"></textarea>
                     </div>
                     <div class="form-group mar-top-40">
-                        <button type="submit" class="btn v7">Send</button>
+                        <button  class="btn v7" (click)="enviocorreo()">Send</button>
                     </div>
                 </div>
             </form>
