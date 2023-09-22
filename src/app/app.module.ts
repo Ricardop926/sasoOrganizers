@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
+
 import { AppComponent } from './app.component';
 import { ResumenComponent } from './resumen/resumen.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
