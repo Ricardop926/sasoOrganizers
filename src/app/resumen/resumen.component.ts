@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SasoOrganices1Service } from '../services/saso-organices1.service';
+import {DataService } from '../services/data.service';
+
 
 @Component({
   selector: 'app-resumen',
@@ -7,11 +8,11 @@ import { SasoOrganices1Service } from '../services/saso-organices1.service';
   styleUrls: ['./resumen.component.css']
 })
 export class ResumenComponent implements OnInit {
-  constructor(public so: SasoOrganices1Service){
+  constructor(public cs: DataService){
 
-  }
-  ngOnInit():void{
 
-  }
-
+}
+ngOnInit(): void {
+  
+}
 }

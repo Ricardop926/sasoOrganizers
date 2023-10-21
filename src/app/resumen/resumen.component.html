@@ -5,10 +5,10 @@
             ✨ Harmony • Peace and Free Spaces</strong></h3>
         <p>At SasoOrganizer´s, we are passionate about transforming every corner into a functional, harmonious and efficient place. We are a leading space organization company dedicated to creating environments that reflect the personality and unique needs of our clients. Whether at home or in the workplace, we believe that a well-organized space can significantly improve 
         quality of life and increase productivity.</p>
-        <div class="info-list row">
+        <div class="info-list row" >
             <!-- <div class="col-sm-6"><span>Nombre : </span> Anderson Bastidas</div> -->
             <!-- <div class="col-sm-6"><span>Fecha de Nacimiento : </span> Junio 10, 1987 </div> -->
-            <div class="col-sm-6" *ngFor="let personalx of so.dPersonales"><span>{{personalx.nombre}} : </span>{{personalx.desp}}</div>
+            <div class="col-sm-6" *ngFor="let personPDatasx of cs.newPdata"><span>{{personPDatasx.name_personalData}}</span>{{personPDatasx.descrip_personalData}}</div>
             <!-- <div class="col-sm-6"><span>Email : </span> @@@</div>
             <div class="col-sm-6"><span>Telefono : </span> + 1(404) 578 5294</div> -->
             <!-- <div class="col-sm-6"><span>Interes : </span> Frelance, Full-Time</div> -->
@@ -65,15 +65,15 @@
             </div>
         </div>
     </div> -->
-    <div class="block-content" >
+    <div class="block-content"  >
         <h3 class="block-title">Services</h3>
         <div class="row">
-           <div class="col-md-4 col-sm-6 service" *ngFor="let servicesx of so.services">
-                <div class="service-icon" >
-                    <i class="{{servicesx.icon}}"></i>
+           <div class="col-md-4 col-sm-6 service" *ngFor="let servicesx of cs. newServices">
+                <div class="" >
+                  <img src="{{servicesx.icon_services}}" alt=""> 
                 </div>
-                <h4>{{servicesx.Nombre}}</h4>
-                <p>{{servicesx.Descripcion}}</p>
+                <h4>{{servicesx.name_services}}</h4>
+                <p>{{servicesx.descrip_services}}</p>
             </div>
        
           

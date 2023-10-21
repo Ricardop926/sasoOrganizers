@@ -1,5 +1,5 @@
-import { Component,OnInit } from '@angular/core';
-import { SasoOrganices1Service } from '../services/saso-organices1.service';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-blog',
@@ -7,14 +7,11 @@ import { SasoOrganices1Service } from '../services/saso-organices1.service';
   styleUrls: ['./blog.component.css']
 })
 
-export class BlogComponent implements OnInit {
-  constructor(public so: SasoOrganices1Service){
+export class BlogComponent  {
+  constructor(){
 
   }
-  ngOnInit():void
-  {
 
-  }
 
 
 
