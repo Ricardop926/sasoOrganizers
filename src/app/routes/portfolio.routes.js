@@ -3,7 +3,7 @@ const storage = require('../../../config/multer')
 const multer = require('multer')
 const uploader = multer({storage})
 
-const { getInicializarionData, getOneProject, getOneService, getProjects,getOnePData, getServices,getpData, newProjects, newService,newPData } = require('../controller/book.controller')
+const { getInicializarionData, getOneProject, getOneService, getProjects,getOnePData, getServices,getpData, newProjects, newService,newPData } = require('../../app/controller/book.controller')
 
 
 route.get('/getInicializationData', getInicializarionData)

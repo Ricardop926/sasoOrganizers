@@ -1,5 +1,5 @@
 const express = require('express')
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8080
 const { urlencoded, json } = require('express')
 const path = require('path')
 const cors = require('cors')

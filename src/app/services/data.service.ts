@@ -17,7 +17,7 @@ export class DataService {
     
    }
    private cargarServicios(){
-    this.http.get('http://localhost:8000/portfolio/getServices')
+    this.http.get('http://localhost:8080/portfolio/getServices')
     .subscribe((resp : any)=>{
       this.newServices = resp;
       console.log(resp);
@@ -26,7 +26,7 @@ export class DataService {
 }
 
 private cargarPData(){
-  this.http.get('http://localhost:8000/portfolio/getPData')
+  this.http.get('http://localhost:8080/portfolio/getPData')
   .subscribe((resp : any)=>{
     this.newPdata = resp;
     console.log(resp);
