@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {DataService } from '../services/data.service';
+
+
+
 
 
 @Component({
@@ -7,12 +11,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog.component.css']
 })
 
-export class BlogComponent  {
-  constructor(){
-
-  }
 
 
+export class  BlogComponent implements OnInit {
+  constructor(public cs: DataService){
 
 
+}
+ngOnInit(): void {
+  
+}
 }

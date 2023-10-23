@@ -73,8 +73,8 @@ async function newService (req, res) {
 
     if(file) {
         
-        let url = `http://localhost:8000/image/${file.filename}`
-        let sql = `insert into tbl_services(name_services, author, icon_service, descrip_services) values 
+        let url = `http://localhost:8080/image/${file.filename}`
+        let sql = `insert into tbl_services(name_services,icon_services, descrip_services) values 
                     (${connection.escape(body.name_services)}, ${connection.escape(url)}, ${connection.escape(body.descrip_services)})`
 
         const result = await Factory(sql)
