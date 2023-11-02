@@ -13,6 +13,8 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +22,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PortafolioComponent,
     BlogComponent,
     ContactoComponent
+   
+   
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
+    
    
     
 

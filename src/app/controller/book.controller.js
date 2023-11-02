@@ -13,7 +13,10 @@ async function getInicializarionData (req, res) {
     let sql_services = `select * from  tbl_services limit 4`
     const res_services = await Factory(sql_services)
 
-    res.json({personData : res_personData, services: res_services, projects:res_projects})
+    let sql_blog = `select * from  tbl_blog limit 4`
+    const res_blog = await Factory(sql_blog)
+
+    res.json({personData : res_personData, services: res_services, projects:res_projects, blog:res_blog})
 }
 
 async function getOneProject (req, res) {
@@ -37,6 +40,13 @@ async function getOnePData (req, res) {
     res.json(result)
 }
 
+async function getOneBlog (req, res) {
+    const { id_blog } = req.params
+    let sql = `select * from tbl_blog where id_blog = ${parseInt(id_blog)}`
+    const result = await Factory(sql)
+    res.json(result)
+}
+
 async function getProjects (req, res) {
     let sql = `select * from tbl_projects`
     const result = await Factory(sql)
@@ -53,13 +63,17 @@ async function getpData (req, res) {
     const result = await Factory(sql)
     res.json(result)
 }
-
+async function getBlog (req, res) {
+    let sql = `select * from tbl_blog`
+    const result = await Factory(sql)
+    res.json(result)
+}
 async function newProjects (req, res) {
     const { body, file } = req
 
     if(file) {
 
-        let url = `http://localhost:8000/image/${file.filename}`
+        let url = `http://localhost:8080/image/${file.filename}`
         let sql = `insert into tbl_projects (name_projects, image_url, descrip) values 
                     (${connection.escape(body.name_projects)}, ${connection.escape(url)}, ${connection.escape(body.descrip)})`
 
@@ -94,15 +108,39 @@ async function newPData (req, res) {
    
 }
 
+async function newBlog (req, res) {
+    const { body, file } = req
+
+    if(file) {
+        
+        let url = `http://localhost:8080/image/${file.filename}`
+        let sql = `insert into tbl_blog(blog_title,blog_img,blog_parrafo) values 
+                    (${connection.escape(body.blog_title)}, ${connection.escape(url)}, ${connection.escape(body.blog_parrafo)})`
+
+        const result = await Factory(sql)
+        res.json(result)
+    }
+}
+
+
+
+
+
+
+
 module.exports = {
     getInicializarionData,
     getOneProject, 
     getOneService,
     getOnePData,
+    getOneBlog,
     getProjects, 
     getServices,
-    getpData, 
+    getpData,
+    getBlog, 
     newProjects,
     newService,
-    newPData
+    newPData,
+    newBlog
 }
+    

@@ -9,11 +9,15 @@ export class DataService {
 
   newServices: any[] = []
   newPdata: any[] = []
+  newBlog : any[] = []
+  newProjects: any[] = []
 
   constructor(private http : HttpClient ) {
 
     this.cargarServicios();
     this.cargarPData();
+    this.cargarBlog();
+    this.cargarProyecto();
     
    }
    private cargarServicios(){
@@ -34,5 +38,28 @@ private cargarPData(){
   })
 }
 
+private cargarBlog(){
+  this.http.get('http://localhost:8080/portfolio/getBlog')
+  .subscribe((resp : any)=>{
+    this.newBlog = resp;
+    console.log(resp);
+    
+  })
 }
+
+private cargarProyecto(){
+  this.http.get('http://localhost:8080/portfolio/getProjects')
+  .subscribe((resp : any)=>{
+    this.newProjects = resp;
+    console.log(resp);
+    
+  })
+}
+}
+
+
+
+
+
+
 

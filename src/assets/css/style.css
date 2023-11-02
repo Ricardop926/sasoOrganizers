@@ -127,6 +127,7 @@ h6 {
 p {
     margin: 0;
     margin-bottom: 30px;
+    
 }
 
 ul {
@@ -1492,6 +1493,21 @@ h4.package {
     margin-left: 0;
 }
 
+.insta-projects{
+  color: #000;
+  font-size: 50px;
+  margin: 0 auto; 
+
+
+
+}
+.info {
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
 .portfolio-item {
     padding-bottom: 30px;
 }
@@ -1728,6 +1744,35 @@ h4.package {
     -ms-transform: rotate(34deg);
     -webkit-transform: rotate(34deg);
     transform: rotate(34deg);
+}
+/* Estilos para la imagen en el artículo del blog */
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 10px solid black;
+    border-radius: 50px;
+}
+
+/* Estilos adicionales para el artículo del blog */
+article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el título de la publicación */
+.blog-title {
+    color: #333;
+}
+
+/* Estilos para el contenido del artículo */
+.blog-content {
+    color: #555;
+    
 }
 
 .post {

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const {} = require('express');
 const nodeMailer = require('nodemailer')
 
@@ -8,14 +9,14 @@ const envioCorreo = (req=request,resp=response)=>{
         host:'smtp.gmail.com',
         post:587,
         auth:{
-            user:'andresdev26@gmail.com',
-            pass:'tkyv eaca guek xndk'
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
         }
     })
     const opciones = {
-        from:'programacion',
+        from:'',
+        to:'sasoorganizers7@gmail.com',
         subject: body.subject,
-        to:body.email,
         text:body.message
     };
 

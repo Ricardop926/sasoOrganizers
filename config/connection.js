@@ -1,6 +1,6 @@
 
 const mysql = require('mysql')
-const mysql_data = require('./mysql_data.json')
+const mysql_data = require('./mysql_data')
 
 const ObjectConnection = {
     host : mysql_data.mysql.host,

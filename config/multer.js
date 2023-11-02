@@ -13,4 +13,14 @@ cb(null, `image${Date.now()}.${file.mimetype.split('/')[1]}`)
 // image/jpg asi manda la funcion la imagen
 })
 
-module.exports = storage
+const fileFilter = (req, file, cb) => {
+    // Definir aquí las reglas para filtrar los tipos de archivos permitidos
+    if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/jpg') {
+      cb(null, true); // Aceptar el archivo
+    } else {
+      cb(new Error('Formato de archivo no válido'), false); // Rechazar el archivo
+    }
+  };
+  
+
+  module.exports = storage;
