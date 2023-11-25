@@ -151,6 +151,7 @@ a:not([href]):not([tabindex]) {
     
     width: 200px; /* Ajustar el tamaño del logo según tus necesidades */
     margin-left: 80px;/*ayuda a centrar*/
+    
    
    
 
@@ -978,6 +979,7 @@ h2.menu-item:after {
     -ms-transform: rotate(34deg);
     -webkit-transform: rotate(34deg);
     transform: rotate(34deg);
+    
 }
 
 .name-block-container h1,
@@ -1007,13 +1009,13 @@ h2.menu-item:after {
 }
 
 .social {
-    position: absolute;
-    bottom: 15%;
+    margin-top: 10px;
+    bottom: 20%;
 }
 
 .social li {
     display: inline-block;
-    margin-right: 80px;
+    margin-right: 20px;
     text-align: center;
     
 }
@@ -2545,6 +2547,9 @@ article {
     .social {
         position: relative;
         margin: 50px 0;
+        margin-top: 20px;
+        
+
     }
     .inline-menu-container {
         width: 100%;
