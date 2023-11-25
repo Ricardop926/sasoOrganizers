@@ -8,8 +8,7 @@ dist/
 tmp/
 app/**/*.js
 app/**/*.js.map
-config
-config/*
+
 
 # dependencies
 node_modules/
