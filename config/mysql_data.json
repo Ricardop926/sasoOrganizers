@@ -1,6 +1,6 @@
 {
     "mysql": {
-        "host": "Localhost",
+        "host": "database-1.czmjam16r89q.us-east-2.rds.amazonaws.com",
         "port": 3306,
         "user": "root",
         "pass": "root9126*", 
