@@ -21,7 +21,7 @@ export class DataService {
     
    }
    private cargarServicios(){
-    this.http.get('http://localhost:8080/portfolio/getServices')
+    this.http.get('http://52.14.196.192:8080/portfolio/getServices')
     .subscribe((resp : any)=>{
       this.newServices = resp;
       console.log(resp);
@@ -30,16 +30,15 @@ export class DataService {
 }
 
 private cargarPData(){
-  this.http.get('http://localhost:8080/portfolio/getPData')
+  this.http.get('http://52.14.196.192:8080/portfolio/getPData')
   .subscribe((resp : any)=>{
     this.newPdata = resp;
     console.log(resp);
-    
   })
 }
 
 private cargarBlog(){
-  this.http.get('http://localhost:8080/portfolio/getBlog')
+  this.http.get('http://52.14.196.192:8080/portfolio/getBlog')
   .subscribe((resp : any)=>{
     this.newBlog = resp;
     console.log(resp);
@@ -48,7 +47,7 @@ private cargarBlog(){
 }
 
 private cargarProyecto(){
-  this.http.get('http://localhost:8080/portfolio/getProjects')
+  this.http.get('http://52.14.196.192:8080/portfolio/getProjects')
   .subscribe((resp : any)=>{
     this.newProjects = resp;
     console.log(resp);
