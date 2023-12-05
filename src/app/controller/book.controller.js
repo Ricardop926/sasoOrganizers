@@ -73,9 +73,9 @@ async function newProjects (req, res) {
 
     if(file) {
 
-        let url = `http://localhost:8080/image/${file.filename}`
+        let url = `http://52.14.196.192:8080/image/${file.filename}`
         let sql = `insert into tbl_projects (name_projects, image_url, descrip) values 
-                    (${connection.escape(body.name_projects)}, ${connection.escape(url)}, ${connection.escape(body.descrip)})`
+                    (${connection.escape(body.name_projects)}, (${connection.escape(url)}, ${connection.escape(body.descrip)})`
 
         const result = await Factory(sql)
         res.json(result)
@@ -85,11 +85,11 @@ async function newProjects (req, res) {
 async function newService (req, res) {
     const { body, file } = req
 
-    if(file) {
+     if(file) {
         
-        let url = `http://localhost:8080/image/${file.filename}`
+        let url = `http://52.14.196.192:8080/image/${file.filename}`
         let sql = `insert into tbl_services(name_services,icon_services, descrip_services) values 
-                    (${connection.escape(body.name_services)}, ${connection.escape(url)}, ${connection.escape(body.descrip_services)})`
+                    (${connection.escape(body.name_services)}, (${connection.escape(body.icon_services)}', ${connection.escape(body.descrip_services)})`
 
         const result = await Factory(sql)
         res.json(result)
@@ -113,7 +113,7 @@ async function newBlog (req, res) {
 
     if(file) {
         
-        let url = `http://localhost:8080/image/${file.filename}`
+        let url = `http://52.14.196.192:8080/image/${file.filename}`
         let sql = `insert into tbl_blog(blog_title,blog_img,blog_parrafo) values 
                     (${connection.escape(body.blog_title)}, ${connection.escape(url)}, ${connection.escape(body.blog_parrafo)})`
 
@@ -121,12 +121,6 @@ async function newBlog (req, res) {
         res.json(result)
     }
 }
-
-
-
-
-
-
 
 module.exports = {
     getInicializarionData,
