@@ -89,7 +89,7 @@ async function newService (req, res) {
         
         let url = `http://52.14.196.192:8080/image/${file.filename}`
         let sql = `insert into tbl_services(name_services,icon_services, descrip_services) values 
-                    (${connection.escape(body.name_services)}, ${connection.escape(url)}', ${connection.escape(body.descrip_services)})`
+                    (${connection.escape(body.name_services)}, ${connection.escape(url)}, ${connection.escape(body.descrip_services)})`
 
         const result = await Factory(sql)
         res.json(result)
