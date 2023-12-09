@@ -35,7 +35,7 @@ export class ContactoComponent  {
 
     }
     console.log(params)
-    this.httpclient.post('http://localhost:3000/envio',params).subscribe(resp =>{
+    this.httpclient.post('http://52.14.196.192:3000/envio',params).subscribe(resp =>{
       console.log(resp);
       Notiflix.Loading.remove();
       Notiflix.Notify.success("Submitted successfully");
